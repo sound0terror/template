@@ -31,7 +31,7 @@
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "src/**/*.{ts, tsx}": "yarn lint:fix"
+    "src/**/*.{ts, tsx}": "npm run lint:fix"
   },
   "eslintConfig": {
     "extends": [
