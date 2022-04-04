@@ -25,19 +25,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eslint": "eslint src/**/*/.ts",
-    "eslint:fix": "eslint src/* --fix",
+    "lint": "eslint src/**/*/.ts",
+    "lint:fix": "eslint src/* --fix",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "lint-staged": {
-    "*.ts":  "eslint",
-    "*.tsx": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --staged"
-    }
+    "src/**/*.{ts, tsx}": "yarn lint:fix"
   },
   "eslintConfig": {
     "extends": [
