@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 import { useQuery } from 'react-query';
 import countryApi from '../api/CountryApi';
 import Container from '../components/UI/Container/Container';
