@@ -35,6 +35,11 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": "npm run lint"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
