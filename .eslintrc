@@ -1,0 +1,50 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.spec.ts",
+                "**/*.spec.tsx",
+                "**/*.test.ts",
+                "**/*.test.tsx"
+            ],
+            "env": {
+                "jest": true
+            }
+        }
+    ],
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
+    "rules": {
+        "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" } ],
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "max-len": ["warn", { "code": 80 }],
+        "@typescript-eslint/explicit-function-return-type": ["error", {"allowExpressions": true}]
+    }
+}
